@@ -12,7 +12,7 @@
 class wiky {
 	private $patterns, $replacements;
 
-	public function __construct() {
+	public function __construct($analyze=false) {
 		$this->patterns=array(
 			// Headings
 			"/^==== (.+?) ====$/m",						// Subsubheading
@@ -97,6 +97,11 @@ class wiky {
 			"$0<br/>",
 			"$0<br/>",
 		);
+		if($analyze) {
+			foreach($this->patterns as $k=>$v) {
+				$this->patterns[$k].="S";
+			}
+		}
 	}
 	public function parse($input) {
 		if(!empty($input))
