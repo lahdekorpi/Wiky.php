@@ -19,7 +19,7 @@ It's basically an attempt to recreate [wiky.js](https://github.com/tanin47/wiky.
 * ---- Horizontal Line
 * : Indentation
 * :: Subindentation
-* * Unordered list (up to four levels "#### text")
+* * Unordered list (up to four levels "**** text")
 * # Ordered list (up to four levels "#### text")
 * [[file:http://example.com/image.jpg title]] an image ([[file|img:http|https|ftp://example.com/image.jpg optional]])
 * [http://example.com An Example Link] a link ([http|https|ftp://example.com mandatory])
