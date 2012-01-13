@@ -22,7 +22,7 @@ It's basically an attempt to recreate [wiky.js](https://github.com/tanin47/wiky.
 * * Unordered list (up to four levels "**** text")
 * # Ordered list (up to four levels "#### text")
 * [[file:http://example.com/image.jpg title]] an image ([[file|img:http|https|ftp://example.com/image.jpg optional]])
-* [http://example.com An Example Link] a link ([http|https|ftp://example.com mandatory])
+* [http://example.com An Example Link] a link ([http|https|ftp://example.com optional])
 
 ## Known issues
 * Unordered and ordered lists can not be mixed (any help and/or ideas would be great)
