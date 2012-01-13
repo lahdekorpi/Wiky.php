@@ -1,0 +1,2 @@
+Wiky.php is a tiny php "library" to convert Wiki Markup language to HTML.
+It's basically an attempt of a recreation of https://github.com/tanin47/wiky.js in PHP (or just regular expression replacements)
