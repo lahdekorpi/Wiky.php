@@ -25,6 +25,7 @@ This is a bold link: '''[http://www.google.com Google]'''.
 This is a bold-italic link: '''''[http://www.google.com Google]'''''.
 This is '''bold''', '''''bold-italic''''', and ''italic''
 This here is a link without text [http://lygon.net]
+Don't forget to strip out, or convert any <strong>html</html> if planning on echoing directly to a page.
 
 Some more lines1
 :A line with indent
