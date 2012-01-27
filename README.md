@@ -28,6 +28,8 @@ It's basically an attempt to recreate [wiky.js](https://github.com/tanin47/wiky.
 ## Known issues / limitations
 * Unordered and ordered lists can not be mixed (any help and/or ideas would be great)
 * Parsing of new lines should be smarter. It should join paragraphs (detected by two consecutive newlines) and avoid listings, headers and indentations
+* It's not designed to handle user errors. If your user fails with syntax, the end result will reflect that.
+* Has only been tested to work with PHP 5.3.6 and later versions. Some older versions might have problems with some markup.
 
 ## Howto use
 	// Include the library (obviously)
