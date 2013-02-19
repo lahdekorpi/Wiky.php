@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wiky.php by lahdekorpi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Wiky.php</h1>
+        <p>A tiny PHP &quot;library&quot; to convert Wiki MarkUp language to HTML</p>
+
+        <p class="view"><a href="https://github.com/lahdekorpi/Wiky.php">View the Project on GitHub <small>lahdekorpi/Wiky.php</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lahdekorpi/Wiky.php/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lahdekorpi/Wiky.php/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lahdekorpi/Wiky.php">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Wiky.php</h1>
+
+<p>Wiky.php is a tiny PHP "library" to convert Wiki Markup language to HTML.
+It's basically an attempt to recreate <a href="https://github.com/tanin47/wiky.js">wiky.js</a> with regular expressions, wrapped in a tiny PHP code.</p>
+
+<h2>Code usage under any of these licenses:</h2>
+
+<ul>
+<li>Apache License 2.0, <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+</li>
+<li>Mozilla Public License 1.1, <a href="http://www.mozilla.org/MPL/1.1/">http://www.mozilla.org/MPL/1.1/</a>
+</li>
+<li>GNU Lesser General Public License 3.0, <a href="http://www.gnu.org/licenses/lgpl-3.0.html">http://www.gnu.org/licenses/lgpl-3.0.html</a>
+</li>
+<li>GNU General Public License 2.0, <a href="http://www.gnu.org/licenses/gpl-2.0.html">http://www.gnu.org/licenses/gpl-2.0.html</a>
+</li>
+<li>Creative Commons Attribution 3.0 Unported License, <a href="http://creativecommons.org/licenses/by/3.0/">http://creativecommons.org/licenses/by/3.0/</a>
+</li>
+</ul><h2>Supported Syntax</h2>
+
+<ul>
+<li>== Heading ==</li>
+<li>=== Subheading ===</li>
+<li>==== Subsubheading ====</li>
+<li>''''' Bold-italic '''''</li>
+<li>''' Bold '''</li>
+<li>'' Italic ''</li>
+<li>---- Horizontal Line</li>
+<li>: Indentation</li>
+<li>:: Subindentation</li>
+<li>* Unordered list (up to four levels "**** text")</li>
+<li># Ordered list (up to four levels "#### text")</li>
+<li>[[file:<a href="http://example.com/image.jpg">http://example.com/image.jpg</a> title]] an image ([[file|img:http|https|<a>ftp://example.com/image.jpg</a> optional]])</li>
+<li>[<a href="http://example.com">http://example.com</a> An Example Link] a link ([http|https|<a>ftp://example.com</a> optional])</li>
+</ul><h2>Known issues / limitations</h2>
+
+<ul>
+<li>Unordered and ordered lists can not be mixed (any help and/or ideas would be great)</li>
+<li>Parsing of new lines should be smarter. It should join paragraphs (detected by two consecutive newlines) and avoid listings, headers and indentations</li>
+<li>It's not designed to handle user errors. If your user fails with syntax, the end result will reflect that.</li>
+<li>Has only been tested to work with PHP 5.3.6 and later versions. Some older versions might have problems with some markup.</li>
+</ul><h2>Howto use</h2>
+
+<pre><code>// Include the library (obviously)
+require_once("wiky.inc.php");
+
+// Create a new wiky to any variable You'd like. Could be $mooming
+// If you pass true to __construct (new wiky(true)), "S" PCRE modifier will be added to all regular expressions. This gives a performance boost when running parse thousands of times. Extreme usage only.
+$wiky=new wiky;
+
+// Call for the function parse() on the variable You created and pass some unparsed text to it, it will return parsed HTML or false if the content was empty. In this example we are loading the file input.wiki, escaping all html characters with htmlspecialchars, running parse and echoing the output
+$input=file_get_contents("input.wiki");
+$input=htmlspecialchars($input);
+echo $wiky-&gt;parse($input);
+</code></pre>
+
+<h2>Author</h2>
+
+<p>Toni Lähdekorpi <a href="mailto:toni@lygon.net">toni@lygon.net</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lahdekorpi">lahdekorpi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
