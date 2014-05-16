@@ -15,6 +15,8 @@ class wiky {
 
 	public function __construct($analyze=false) {
 		$this->patterns=array(
+			"/\r\n/",
+			
 			// Headings
 			"/^==== (.+?) ====$/m",						// Subsubheading
 			"/^=== (.+?) ===$/m",						// Subheading
@@ -57,6 +59,8 @@ class wiky {
 			"/^[^><\n\r]+$/m",						// Ones with no elements
 		);
 		$this->replacements=array(
+			"\n",
+			
 			// Headings
 			"<h3>$1</h3>",
 			"<h2>$1</h2>",
